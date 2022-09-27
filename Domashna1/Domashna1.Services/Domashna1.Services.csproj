@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domashna1.Domain\Domashna1.Domain.csproj" />
+    <ProjectReference Include="..\Domashna1.Repository\Domashna1.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿@model List<AdminApplication.Models.Ticket>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Tickets</h1>
+<form asp-action="ExportAllTickets" method="get">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Movie Name
+                </th>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Genre
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieName)
+                    </td>
+                    <td>
+                        <img src="@item.Image" style="height:100px" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+    Insert Genre:<input name="genre" type="text" /><br />
+        </div><br />
+    <input type="submit" id="btn" value="Export Tickets" />
+</form>
